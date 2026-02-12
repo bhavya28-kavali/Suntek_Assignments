@@ -1,0 +1,49 @@
+
+### CREATE PRODUCT
+POST http://localhost:4000/product-api/products
+Content-Type: application/json
+
+{
+  "productName": "Smartphone",
+  "price": 7000,
+  "brand": "Moto"
+}
+
+
+
+
+### CREATE USER
+
+POST http://localhost:4000/user-api/users
+Content-Type: application/json
+
+{
+  "name": "Bhavya",
+  "email": "bhavya@gmail.com",
+  "password": "123456"
+}
+
+
+
+### GET ALL USERS
+
+GET http://localhost:4000/user-api/users
+
+
+
+###ADD PRODUCT TO USER CART
+PUT http://localhost:4000/user-api/users/user-id/698190296463f1030848e758/product-id/69847087a609f1041bcc6745
+
+
+
+
+### CREATE ANOTHER PRODUCT 
+
+POST http://localhost:4000/product-api/products
+Content-Type: application/json
+
+{
+  "productName": "Laptop",
+  "price": 55000,
+  "brand": "Dell"
+}
