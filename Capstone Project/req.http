@@ -1,0 +1,103 @@
+POST http://localhost:4000/user-api/users
+Content-Type:application/json
+
+{
+    "firstName":"Bhavya",
+    "lastName":"Kavali",
+    "email":"bhavyakavali@gmail.com",
+    "password":"Bhavya@2806",
+    "profileImageUrl":"http://example.com/avatars/author.png"
+}
+###
+### User Login
+POST http://localhost:4000/common-api/login
+Content-Type: application/json
+
+{
+  "email": "bhavyakavali@gmail.com",
+  "password": "Bhavya@2806"
+}
+###
+POST http://localhost:4000/author-api/users
+Content-Type:application/json
+
+{
+    "firstName":"ammu",
+    "lastName":"kavali",
+    "email":"ammukavali@28gmail.com",
+    "password":"ammu@30",
+    "profileImageUrl":"http://example.com/avatars/author.png"
+}
+###
+POST http://localhost:4000/author-api/users
+Content-Type:application/json
+
+{
+    "firstName":"bhagya",
+    "lastName":"laxmi",
+    "email":"bhagyalaxmi@gmail.com",
+    "password":"bhagya@26",
+    "profileImageUrl":"http://example.com/avatars/author.png"
+}
+
+###
+POST http://localhost:4000/author-api/articles
+Content-Type: application/json
+
+{
+    "author":"698979b0bfdff53198317178",
+    "title":"bhavya's Article",
+    "category":"Python Programming",
+    "content":"Content of Article"
+}
+
+###
+GET http://localhost:4000/author-api/articles/698979b0bfdff53198317178
+###
+PUT http://localhost:4000/author-api/articles
+Content-Type: application/json
+
+{
+    "author":"69896d47eafbf039e83f8734",
+    "articleId":"69897933090c760f53f9ae04",
+    "title":"Test 2 Article",
+    "category":"JAVA Programming",
+    "content":"Content of Test Article 2"
+}
+###
+PUT http://localhost:4000/author-api/articledelete
+Content-Type: application/json
+
+{
+    "author":"69896d47eafbf039e83f8734",
+    "articleId":"69897933090c760f53f9ae04"
+}
+###
+POST http://localhost:4000/logout
+
+###
+GET http://localhost:4000/user-api/userarticle
+
+###
+POST http://localhost:4000/user-api/usercomment/69897933090c760f53f9ae04
+Content-Type: application/json
+
+{
+    "comments": "This is a great article!"
+}
+
+###
+POST  http://localhost:4000/admin-api/adminlogin
+Content-Type: application/json
+
+{
+  "email": "admin@email.com",
+  "password": "admin@123"
+
+}
+
+###
+GET http://localhost:4000/admin-api/readarticles/69896d47eafbf039e83f8734
+
+###
+PUT http://localhost:4000/admin-api/hold
